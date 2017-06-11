@@ -1,4 +1,4 @@
-from example_samplers import *
+from .example_samplers import *
 
 def run(app, xyzzy):
     samplers = [
@@ -15,11 +15,11 @@ def run(app, xyzzy):
                 use_debugger=True
                 )
     finally:
-        print "Disconnecting clients"
+        print("Disconnecting clients")
         xyzzy.stopped = True
-        
-        print "Stopping %d timers" % len(samplers)
+
+        print("Stopping %d timers" % len(samplers))
         for (i, sampler) in enumerate(samplers):
             sampler.stop()
 
-    print "Done"
+    print("Done")
