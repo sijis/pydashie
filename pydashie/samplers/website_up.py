@@ -1,4 +1,4 @@
-from pydashie.dashie_sampler import DashieSampler
+from .dashie import DashieSampler
 
 import requests
 

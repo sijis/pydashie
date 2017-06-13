@@ -1,6 +1,7 @@
 import datetime
 import json
-from .repeated_timer import RepeatedTimer
+from ..repeated_timer import RepeatedTimer
+
 
 class DashieSampler:
     def __init__(self, app, interval):
