@@ -1,4 +1,6 @@
-from .example_samplers import *
+from .samplers.buzzword import BuzzwordsSampler
+from .samplers.convergence import ConvergenceSampler
+from .samplers.synergy import SynergySampler
 
 def run(app, xyzzy):
     samplers = [
