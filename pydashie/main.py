@@ -54,7 +54,7 @@ def close_stream(*args, **kwargs):
 def run_sample_app():
     import socketserver
     socketserver.BaseServer.handle_error = close_stream
-    from .example_app import run
+    from .app import run
     run(app, xyzzy)
 
 
