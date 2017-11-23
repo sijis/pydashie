@@ -2,23 +2,14 @@ import logging
 import os
 import queue
 
-from flask import (Flask, Response, current_app, render_template, request, send_from_directory)
+from flask import (Flask, Response, current_app, render_template, request,
+                   send_from_directory)
+
+from .utils.xyzzy import xyzzy
 
 app = Flask(__name__)
 logging.basicConfig()
 log = logging.getLogger(__name__)
-
-
-class Z:
-    pass
-
-
-xyzzy = Z()
-xyzzy.events_queue = {}
-xyzzy.last_events = {}
-xyzzy.using_events = True
-xyzzy.MAX_QUEUE_LENGTH = 20
-xyzzy.stopped = False
 
 
 @app.route("/")
