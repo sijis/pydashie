@@ -51,8 +51,8 @@ def main():
             if 'scss' in fileName:
                 fileList.append(os.path.join(root, fileName))
                 log.info('Found SCSS to compile: %s' % fileName)
-    import StringIO
-    css_output = StringIO.StringIO()
+    import io
+    css_output = io.StringIO()
     css = Scss()
     css_output.write('\n'.join([css.compile(open(filePath).read()) for filePath in fileList]))
 
