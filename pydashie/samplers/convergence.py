@@ -14,8 +14,7 @@ class ConvergenceSampler(DashieSampler):
         DashieSampler.__init__(self, *args, **kwargs)
 
     def sample(self):
-        self.items.append({'x': self.seedX,
-                           'y': random.randint(0,20)})
+        self.items.append({'x': self.seedX, 'y': random.randint(0, 20)})
         self.seedX += 1
         if len(self.items) > 10:
             self.items.popleft()

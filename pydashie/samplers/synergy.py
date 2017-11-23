@@ -12,8 +12,6 @@ class SynergySampler(DashieSampler):
         return 'synergy'
 
     def sample(self):
-        s = {'value': random.randint(0, 100),
-             'current': random.randint(0, 100),
-             'last': self._last}
+        s = {'value': random.randint(0, 100), 'current': random.randint(0, 100), 'last': self._last}
         self._last = s['current']
         return s
