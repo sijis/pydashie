@@ -2,6 +2,7 @@ from .dashie import DashieSampler
 
 import requests
 
+
 class WebsiteUpSampler(DashieSampler):
     def __init__(self, *args, **kwargs):
         DashieSampler.__init__(self, *args, **kwargs)
@@ -15,8 +16,8 @@ class WebsiteUpSampler(DashieSampler):
         try:
             r = requests.get(self.page)
             assert r.status_code == 200
-            up='UP'
+            up = 'UP'
         except:
-            up='DOWN'
-        s = {'text':up}
+            up = 'DOWN'
+        s = {'text': up}
         return s

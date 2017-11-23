@@ -2,20 +2,16 @@ from .samplers.buzzword import BuzzwordsSampler
 from .samplers.convergence import ConvergenceSampler
 from .samplers.synergy import SynergySampler
 
+
 def run(app, xyzzy):
     samplers = [
         SynergySampler(xyzzy, 3),
-        BuzzwordsSampler(xyzzy, 2), # 10
+        BuzzwordsSampler(xyzzy, 2),  # 10
         ConvergenceSampler(xyzzy, 1),
     ]
 
     try:
-        app.run(debug=True,
-                port=5000,
-                threaded=True,
-                use_reloader=False,
-                use_debugger=True
-                )
+        app.run(debug=True, port=5000, threaded=True, use_reloader=False, use_debugger=True)
     finally:
         print("Disconnecting clients")
         xyzzy.stopped = True
