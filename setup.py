@@ -11,7 +11,7 @@ setup(
         'pyScss >= 1.2.0'
     ],
     entry_points={
-      'console_scripts': ['pydashie = pydashie.main:run_sample_app']
+      'console_scripts': ['pydashie = pydashie.__main__:run_app']
     },
     license='MIT',
     long_description=open('README.rst').read(),
