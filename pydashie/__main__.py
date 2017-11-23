@@ -4,7 +4,7 @@ from .app import run
 from .routes import *
 
 
-def run_sample_app():
+def run_app():
     socketserver.BaseServer.handle_error = close_stream
     run(app, xyzzy)
 
