@@ -17,4 +17,5 @@ class BuzzwordsSampler(DashieSampler):
                                 'Skydancer']
         items = [{'label': pony_name, 'value': random.randint(0, 20)} for pony_name in my_little_pony_names]
         random.shuffle(items)
-        return {'items':items}
+        results = {'items': items}
+        return results
