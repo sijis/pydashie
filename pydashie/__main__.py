@@ -1,7 +1,8 @@
 import socketserver
 
 from .app import app, run
-from .routes import *
+from .utils.xyzzy import xyzzy
+from .routes import close_stream
 
 
 def run_app():
