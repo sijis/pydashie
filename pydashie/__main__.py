@@ -1,6 +1,6 @@
 import socketserver
 
-from .app import run
+from .app import app, run
 from .routes import *
 
 

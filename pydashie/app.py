@@ -1,6 +1,10 @@
+from flask import Flask
+
 from .samplers.buzzword import BuzzwordsSampler
 from .samplers.convergence import ConvergenceSampler
 from .samplers.synergy import SynergySampler
+
+app = Flask(__name__)
 
 
 def run(app, xyzzy):

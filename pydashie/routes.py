@@ -2,12 +2,11 @@ import logging
 import os
 import queue
 
-from flask import (Flask, Response, current_app, render_template, request,
-                   send_from_directory)
+from flask import (Response, current_app, render_template, request, send_from_directory)
 
+from .app import app
 from .utils.xyzzy import xyzzy
 
-app = Flask(__name__)
 logging.basicConfig()
 log = logging.getLogger(__name__)
 
